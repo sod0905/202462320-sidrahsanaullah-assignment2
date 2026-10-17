@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Node (not used now, but keeps the repo clean later)
+node_modules/
+npm-debug.log*
+
+# Environment
+.env

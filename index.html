@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidrah's Portfolio</title>
+  <meta name="description" content="Personal portfolio of Sidrah, software engineering student at KFUPM." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- External JavaScript. defer = run after the HTML is parsed -->
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav">
+    <a class="nav__brand" href="#top">SS</a>
+
+    <!-- Hamburger button, only visible on small screens -->
+    <button class="nav__burger" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <!-- Theme toggle is filled in by JavaScript -->
+      <button class="theme-btn" id="themeToggle" aria-label="Switch theme">Light mode</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO / ABOUT ============ -->
+    <section class="hero" id="about">
+      <p class="hero__greeting" id="greeting">Hello</p>
+      <h1 class="hero__name">Sidrah Sanaullah</h1>
+      <p class="hero__tagline">Software Engineering student</p>
+
+      <p class="hero__bio">
+        I'm a software engineering student at King Fahd University of Petroleum &amp; Minerals. I am now a junior, 
+        with hopes of graduating soon. At the moment I am learning web development, and using AI to develop small 
+        projects.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="#projects">See my projects!</a>
+        <a class="btn btn--ghost" href="#contact">Get in touch!</a>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="grid">
+        <article class="project">
+          <img class="project__img" src="assets/images/project1.svg" alt="Clinic system project preview" />
+          <div class="project__body">
+            <h3>Clinic Management System</h3>
+            <p>
+              A simple coding project at the end of term 252, for ICS202, for managing patients, appointments and records at a clinic, built
+              in Java. Covers scheduling, patient lookup and record-keeping in a single interface.
+            </p>
+            <ul class="tags">
+              <li>Java</li>
+              <li>Desktop app</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <img class="project__img" src="assets/images/project2.svg" alt="Fitness app project preview" />
+          <div class="project__body">
+            <h3>Fitness App</h3>
+            <p>
+              A Python application built in term 242 for ICS104, that helps users track workouts and progress toward their fitness
+              goals, with a simple interface for logging activity over time.
+            </p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Health &amp; fitness</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <img class="project__img" src="assets/images/project3.svg" alt="Pentomino game project preview" />
+          <div class="project__body">
+            <h3>Pentomino Game</h3>
+            <p>
+              A puzzle game built with JavaFX, in term 251 for ICS108, where players fit pentomino pieces onto a board, with
+              custom graphics and interactive pieces.
+            </p>
+            <ul class="tags">
+              <li>JavaFX</li>
+              <li>Game</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS (Flexbox &amp; Grid)</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Git &amp; GitHub</li>
+        <li>Figma</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT INFO  -->
+    <section class="section" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <p class="section__lead">Send me a message and I'll reply by email.</p>
+
+      <!-- No backend: JavaScript just validates the form and shows a confirmation -->
+      <form class="form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="What would you like to talk about?"
+            required></textarea>
+          <small class="error" id="messageError"></small>
+        </div>
+
+        <button class="btn btn--solid" type="submit">Send message</button>
+        <p class="form__status" id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Assignment1 by Sidrah Sanaullah · <span id="year"></span></p>
+  </footer>
+</body>
+
+</html>

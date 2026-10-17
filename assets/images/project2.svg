@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Fitness App project preview">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a2508"/>
+      <stop offset="0.5" stop-color="#a65f1c"/>
+      <stop offset="1" stop-color="#e0a458"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#g)"/>
+  <text x="300" y="160" text-anchor="middle" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-size="34" font-weight="700" fill="#ffffff" stroke="#3a1c06" stroke-opacity="0.35" stroke-width="1">Fitness App</text>
+</svg>
