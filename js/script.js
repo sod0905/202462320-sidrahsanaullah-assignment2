@@ -110,3 +110,55 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 /* Run the greeting once everything above is set up */
 setGreeting();
+
+/* Live project search */
+(function () {
+  const input = document.getElementById("projectSearch");
+  const clearBtn = document.getElementById("clearSearch");
+  const countEl = document.getElementById("searchCount");
+  const emptyEl = document.getElementById("emptyState");
+  const cards = Array.from(document.querySelectorAll("#projects .project"));
+
+  // If the markup is missing, stop quietly so the rest of the site still works
+  if (!input || !cards.length) return;
+
+  // Searchable text for each card (title + description + tags), built once
+  const searchText = cards.map((card) => card.textContent.toLowerCase());
+
+  function updateResults() {
+    const query = input.value.trim().toLowerCase();
+    let visible = 0;
+
+    cards.forEach((card, i) => {
+      const match = query === "" || searchText[i].includes(query);
+      card.hidden = !match;
+      if (match) visible++;
+    });
+
+    emptyEl.hidden = visible !== 0;
+    clearBtn.hidden = query === "";
+
+    if (query === "") {
+      countEl.textContent = "";
+    } else if (visible > 0) {
+      countEl.textContent = "Showing " + visible + " of " + cards.length + " projects.";
+    } else {
+      countEl.textContent = "0 projects match \"" + input.value.trim() + "\".";
+    }
+  }
+
+  input.addEventListener("input", updateResults);
+
+  clearBtn.addEventListener("click", function () {
+    input.value = "";
+    updateResults();
+    input.focus();
+  });
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      input.value = "";
+      updateResults();
+    }
+  });
+})();
