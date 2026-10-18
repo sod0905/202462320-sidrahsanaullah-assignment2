@@ -162,3 +162,28 @@ setGreeting();
     }
   });
 })();
+
+/* ---------- Fade-in on scroll ---------- */
+(function () {
+  // Older browsers: skip the effect so content is never hidden
+  if (!("IntersectionObserver" in window)) return;
+
+  const targets = document.querySelectorAll(".section__title, .project, .skills li, .form");
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); // animate once only
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  targets.forEach(function (el) {
+    el.classList.add("reveal"); // added by JS, so no-JS visitors still see everything
+    observer.observe(el);
+  });
+})();
