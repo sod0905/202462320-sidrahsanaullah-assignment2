@@ -62,7 +62,19 @@
     <!-- PROJECTS -->
     <section class="section" id="projects">
       <h2 class="section__title">Projects</h2>
-
+       
+      <div class="search">
+        <label for="projectSearch" class="search__label">Search projects</label>
+        <div class="search__row">
+          <input type="search" id="projectSearch" placeholder="Try Python, Java or game" autocomplete="off" />
+          <button type="button" class="btn btn--ghost" id="clearSearch" hidden>Clear</button>
+        </div>
+        <p class="search__count" id="searchCount" role="status" aria-live="polite"></p>
+    </div>
+    <p class="empty" id="emptyState" hidden>
+      No projects found. Try a different word, or press Clear to see all projects.
+    </p>
+    
       <div class="grid">
         <article class="project">
           <img class="project__img" src="assets/images/project1.svg" alt="Clinic system project preview" />
