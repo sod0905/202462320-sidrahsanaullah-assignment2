@@ -218,7 +218,7 @@ a {
   border-color: var(--accent-1);
 }
 
-/* ---------- 5. Sections ---------- */
+/*  5. Sections  */
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -297,7 +297,7 @@ a {
   padding: 8px 16px;
 }
 
-/* ---------- 6. Contact form ---------- */
+/*  6. Contact form  */
 .form {
   margin-top: 22px;
   max-width: 560px;
@@ -345,7 +345,7 @@ textarea:focus {
   font-size: 15px;
 }
 
-/* ---------- 7. Footer ---------- */
+/*  7. Footer */
 .footer {
   text-align: center;
   color: var(--muted);
@@ -355,7 +355,7 @@ textarea:focus {
   margin-top: 40px;
 }
 
-/* ---------- 8. Responsive: tablet and mobile ---------- */
+/*  8. Responsive: tablet and mobile  */
 @media (max-width: 760px) {
 
   /* Menu collapses into a dropdown opened by the hamburger */
@@ -395,5 +395,70 @@ textarea:focus {
 
   * {
     transition: none !important;
+  }
+}
+
+/*  Project search  */
+.search {
+  margin-top: 22px;
+  max-width: 560px;
+}
+
+.search__label {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.search__row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search__row input {
+  flex: 1;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search__row input:focus {
+  box-shadow: 0 0 0 3px rgba(194, 48, 79, 0.25);
+}
+
+.search__count {
+  min-height: 22px;
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.project[hidden] {
+  display: none;
+}
+
+/* Empty state */
+.empty {
+  margin-top: 26px;
+  padding: 18px 20px;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  animation: fadeUp 0.35s ease;
+}
+
+.empty[hidden] {
+  display: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
