@@ -462,3 +462,73 @@ textarea:focus {
     transform: none;
   }
 }
+/* ---------- Hover effects ---------- */
+.project {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-2);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.btn {
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.skills li {
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.skills li:hover {
+  color: var(--text);
+  border-color: var(--accent-1);
+  transform: translateY(-2px);
+}
+
+/* ---------- Fade-in on scroll (class added by JavaScript) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.project.reveal.is-visible:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------- Animated form messages ---------- */
+.form__status:not(:empty),
+.error:not(:empty) {
+  animation: fadeUp 0.35s ease;
+}
+
+/* ---------- Respect users who ask for less motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .empty,
+  .form__status:not(:empty),
+  .error:not(:empty) {
+    animation: none;
+  }
+
+  .project:hover,
+  .btn:hover,
+  .skills li:hover {
+    transform: none;
+  }
+}
