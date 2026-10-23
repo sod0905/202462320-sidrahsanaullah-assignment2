@@ -1,16 +1,12 @@
 # Personal Portfolio - Sidrah Sanaullah
 
-This is my personal portfolio website for Assignment 1. I made it using HTML, CSS, and JavaScript.
-
-## Live Site
-
-Add the GitHub Pages link here after deploying the website.
+This is my personal portfolio website for Assignment 2, which is an extension of the work that I have done in Assignment 1. I made it using HTML, CSS, and JavaScript, and this has more interactive features, animations and user feedback.
 
 ## Project Description
 
 The website is a simple portfolio where I introduce myself, show some of the projects I have worked on, list my skills, and include a contact form.
 
-This is the first version of my portfolio, and I can add more to it in future assignments.
+This is the second version of my portfolio, and I can add more to it in future assignments.
 
 ## Sections
 
@@ -44,6 +40,13 @@ The website uses JavaScript for a few interactive features:
 4. Contact form validation.
 5. Smooth scrolling between sections.
 
+## New Javascript Features (for assignment 2)
+1. Search projects by title, description or tags.
+2. Switch between light and dark mode. The selected theme is saved.
+3. Use the contact form, which checks the fields and shows a confirmation.
+4. See animations when scrolling and hovering over project cards and buttons.
+5. View a result count or a message when no projects match the search.
+
 ## How to Run
 
 There is nothing that needs to be installed to run the website.
@@ -54,10 +57,13 @@ There is nothing that needs to be installed to run the website.
 
 You can also use VS Code with the Live Server extension if you have it installed.
 
+## AI Use Summary
+I changed the theme from blue to burgundy, and asked it to generate orange colored images which would make it fit the burgundy theme. The code of assignment1 was sent to Claude along with assignment 2's rubric and I asked for an explanation on how to begin the project, along with generating basic ideas for how to do each part of the project, after which I edited the code. There are more details in the AI-Usage-Report. 
+
 ## Folder Structure
 
 ```text
-202462320-sidrahsanaullah-assignment1/
+202462320-sidrahsanaullah-assignment2/
 │
 ├── README.md
 ├── index.html
