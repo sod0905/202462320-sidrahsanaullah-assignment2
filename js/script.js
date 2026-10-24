@@ -165,7 +165,7 @@ setGreeting();
 
 /* ---------- Fade-in on scroll ---------- */
 (function () {
-  // Older browsers: skip the effect so content is never hidden
+  // Older browsers skip the effect so content is never hidden
   if (!("IntersectionObserver" in window)) return;
 
   const targets = document.querySelectorAll(".section__title, .project, .skills li, .form");
@@ -181,9 +181,10 @@ setGreeting();
     },
     { threshold: 0.15 }
   );
+  document.documentElement.classList.add("reveal-ready");
 
   targets.forEach(function (el) {
-    el.classList.add("reveal"); // added by JS, so no-JS visitors still see everything
+    el.classList.add("reveal"); 
     observer.observe(el);
   });
 })();
