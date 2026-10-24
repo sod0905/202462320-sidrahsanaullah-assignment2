@@ -491,14 +491,14 @@ textarea:focus {
   transform: translateY(-2px);
 }
 
-/* ---------- Fade-in on scroll (class added by JavaScript) ---------- */
-.reveal {
+/* ---------- Fade-in on scroll  ---------- */
+.reveal-ready .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.is-visible {
+.reveal-ready .reveal.is-visible {
   opacity: 1;
   transform: none;
 }

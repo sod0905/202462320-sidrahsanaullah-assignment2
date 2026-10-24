@@ -122,7 +122,7 @@ setGreeting();
   // If the markup is missing, stop quietly so the rest of the site still works
   if (!input || !cards.length) return;
 
-  // Searchable text for each card (title + description + tags), built once
+  //
   const searchText = cards.map((card) => card.textContent.toLowerCase());
 
   function updateResults() {
