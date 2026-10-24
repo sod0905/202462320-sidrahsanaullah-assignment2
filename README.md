@@ -58,7 +58,7 @@ There is nothing that needs to be installed to run the website.
 You can also use VS Code with the Live Server extension if you have it installed.
 
 ## AI Use Summary
-I changed the theme from blue to burgundy, and asked it to generate orange colored images which would make it fit the burgundy theme. The code of assignment1 was sent to Claude along with assignment 2's rubric and I asked for an explanation on how to begin the project, along with generating basic ideas for how to do each part of the project, after which I edited the code. There are more details in the AI-Usage-Report. 
+I changed the theme from blue to burgundy, and asked it to generate orange colored images which would make it fit the burgundy theme. The code of assignment1 was sent to Claude along with assignment 2's rubric and I asked for an explanation on how to begin the project, along with generating basic ideas for how to do each part of the project. I used chatgpt for more clarification and asked how to step by step do each part of the code and asked for verifications on my code and whether what i did was correct. There are more details in the AI-Usage-Report. 
 
 ## Folder Structure
 
