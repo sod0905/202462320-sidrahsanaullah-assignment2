@@ -1,7 +1,5 @@
 # AI Usage Report
 
-# AI Usage Report
-
 ## AI Tools Used
 
 I used Claude and Chatgpt while working on this assignment.
